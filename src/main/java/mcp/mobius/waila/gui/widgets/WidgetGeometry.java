@@ -178,8 +178,6 @@ public class WidgetGeometry {
             this.y = y;
         }
 
-        ;
-
         public double getX() {
             return this.x;
         }

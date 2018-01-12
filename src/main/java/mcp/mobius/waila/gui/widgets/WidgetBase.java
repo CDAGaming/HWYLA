@@ -117,8 +117,7 @@ public abstract class WidgetBase implements IWidget {
         if (this.getLeft() > posx) return false;
         if (this.getRight() < posx) return false;
         if (this.getTop() > posy) return false;
-        if (this.getBottom() < posy) return false;
-        return true;
+        return !(this.getBottom() < posy);
     }
 
     ///////////////////////
@@ -228,8 +227,6 @@ public abstract class WidgetBase implements IWidget {
         return this;
     }
 
-    ;
-
     @Override
     public IWidget setSize(double sx, double sy) {
         return this.setSize(sx, sy, this.geom.fracSizeX, this.geom.fracSizeY);
@@ -241,8 +238,6 @@ public abstract class WidgetBase implements IWidget {
         this.emit(Signal.GEOM_CHANGED, this.geom);
         return this;
     }
-
-    ;
 
     @Override
     public IWidget adjustSize() {

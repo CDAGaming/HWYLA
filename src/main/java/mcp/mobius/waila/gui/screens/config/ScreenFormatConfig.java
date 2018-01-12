@@ -137,7 +137,7 @@ public class ScreenFormatConfig extends GuiScreen {
     }
 
     @Override
-    protected void keyTyped(char typedChar, int keyCode) throws IOException {
+    protected void keyTyped(char typedChar, int keyCode) {
         if (keyCode == Keyboard.KEY_ESCAPE)
             Minecraft.getMinecraft().displayGuiScreen(parent);
 
@@ -153,7 +153,7 @@ public class ScreenFormatConfig extends GuiScreen {
     }
 
     @Override
-    protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
+    protected void mouseClicked(int mouseX, int mouseY, int mouseButton) {
         super.mouseClicked(mouseX, mouseY, mouseButton);
 
         nameFormat.mouseClicked(mouseX, mouseY, mouseButton);
@@ -168,7 +168,7 @@ public class ScreenFormatConfig extends GuiScreen {
     }
 
     @Override
-    protected void actionPerformed(GuiButton button) throws IOException {
+    protected void actionPerformed(GuiButton button) {
         switch (button.id) {
             case 0: {
                 Minecraft.getMinecraft().displayGuiScreen(parent);

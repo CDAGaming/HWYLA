@@ -30,11 +30,8 @@ public class ScreenEnchants extends ScreenBase {
 
         String columnName = "\u00a7a\u00a7o" + LangUtil.translateG("enchant.title.name");
         String columnMinLvl = "\u00a7a\u00a7o" + LangUtil.translateG("enchant.title.minlvl");
-        ;
         String columnMaxLvl = "\u00a7a\u00a7o" + LangUtil.translateG("enchant.title.maxlvl");
-        ;
         String columnWeight = "\u00a7a\u00a7o" + LangUtil.translateG("enchant.title.weight");
-        ;
 
         ((ViewTable) this.getRoot().getWidget("Table"))
                 .setColumnsTitle(columnName, columnMinLvl, columnMaxLvl, columnWeight, "\u00a7a\u00a7oMod")

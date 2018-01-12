@@ -23,11 +23,11 @@ public enum IconUI {
     public final int bu, bv, bsu, bsv;
     public final String symbol;
 
-    private IconUI(int u, int v, int su, int sv, String symbol) {
+    IconUI(int u, int v, int su, int sv, String symbol) {
         this(u, v, su, sv, -1, -1, -1, -1, symbol);
     }
 
-    private IconUI(int u, int v, int su, int sv, int bu, int bv, int bsu, int bsv, String symbol) {
+    IconUI(int u, int v, int su, int sv, int bu, int bv, int bsu, int bsv, String symbol) {
         this.u = u;
         this.v = v;
         this.su = su;

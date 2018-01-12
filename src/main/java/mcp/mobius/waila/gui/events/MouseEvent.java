@@ -8,7 +8,6 @@ public class MouseEvent {
 
     public static int buttonCount = Mouse.getButtonCount();
 
-    ;
     public long timestamp;
     public Minecraft mc;
     public IWidget srcwidget;
@@ -26,7 +25,7 @@ public class MouseEvent {
         this.mc = Minecraft.getMinecraft();
 
         this.x = (double) Mouse.getEventX() * (double) this.srcwidget.getSize().getX() / (double) this.mc.displayWidth;
-        this.y = (double) this.srcwidget.getSize().getY() - (double) Mouse.getEventY() * (double) this.srcwidget.getSize().getY() / (double) this.mc.displayHeight - 1.0;
+        this.y = this.srcwidget.getSize().getY() - (double) Mouse.getEventY() * (double) this.srcwidget.getSize().getY() / (double) this.mc.displayHeight - 1.0;
 
         //this.x = Mouse.getEventX();
         //this.y = Mouse.getEventY();
@@ -44,8 +43,8 @@ public class MouseEvent {
 
     public String toString() {
         String retstring = String.format("MOUSE %s :  [%s] [ %.2f %.2f %d ] [", this.type, this.timestamp, this.x, this.y, this.z);
-        if (this.buttonCount < 5)
-            for (int i = 0; i < this.buttonCount; i++)
+        if (buttonCount < 5)
+            for (int i = 0; i < buttonCount; i++)
                 retstring += String.format(" %s ", this.buttonState[i]);
         else
             for (int i = 0; i < 5; i++)
@@ -73,7 +72,7 @@ public class MouseEvent {
             return this.type;
         }
 
-        for (int i = 0; i < this.buttonCount; i++) {
+        for (int i = 0; i < buttonCount; i++) {
             if (this.buttonState[i] != me.buttonState[i]) {
                 if (this.buttonState[i] == true)
                     this.type = EventType.CLICK;
