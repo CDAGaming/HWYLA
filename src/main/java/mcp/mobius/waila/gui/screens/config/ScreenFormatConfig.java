@@ -153,7 +153,7 @@ public class ScreenFormatConfig extends GuiScreen {
     }
 
     @Override
-    protected void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+    protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
         super.mouseClicked(mouseX, mouseY, mouseButton);
 
         nameFormat.mouseClicked(mouseX, mouseY, mouseButton);
